@@ -1,0 +1,114 @@
+/* ==UserStyle==
+@name           Wolvden WebGame Dark/OLED Theme
+@namespace      github.com/Knighto00/Stylus_Wolvden-Dark-OLED-Theme
+@description    A modest dark/OLED theme for wolvden.com website. A web game.
+@author         Knighto00 ->> (https://github.com/Knighto00)
+@homepageURL    https://github.com/Knighto00/Stylus_Wolvden-Dark-OLED-Theme
+@supportURL     https://github.com/Knighto00/Stylus_Wolvden-Dark-OLED-Theme/issues
+@version        1.0.0
+@license        GNU GPLv3
+@preprocessor   stylus
+
+@var checkbox disableTopBarImage	"Disable Top Bar Image"										0
+
+@var checkbox disableBackgroundImage"Disable Background Image"                         			1
+
+@var color    pureBlackColor        "Pure Black Color"                                      #000000
+
+@var color    secondLayerBkgColor	"Second Layer Background Color"					 		#080808
+
+@var color 	  alertsColor			"Alerts Notifications Color"							#131313
+
+@var color 	  onHoverColor			"Items on Hover Color"									#3a3a3a
+
+@var color    bordersColor          "Borders Color"                                         #2f2f2f
+==/UserStyle== */
+
+@-moz-document domain("wolvden.com") {
+	/* Homepage */
+		/* Top/Navbars */
+		#header .navbar-status
+		#header .breadcrumb-nav
+		.dropdown-menu
+		.dropdown-item
+		#header .navbar-main
+		{background-color: pureBlackColor !important}
+
+		if (disableTopBarImage == 1)
+		{
+			.navbar-brand
+			{background-image: none !important}
+		}
+
+		.list-group-item:hover
+		.dropdown-item:hover
+		{background-color: onHoverColor !important}
+
+		.alert
+		.alert-info
+		{background-color: alertsColor !important; border:none alertsColor !important}
+
+		/* Main Content */
+		if (disableBackgroundImage == 1)
+		{
+			body
+			{background-image:none !important; background-color:pureBlackColor !important}
+		}
+
+		#main
+		{background-color: secondLayerBkgColor !important}
+
+		.list-group-item
+		.table .left
+		.item-row
+		{background-color: pureBlackColor !important}
+
+		/* Left Sidebar */
+		#sidebar
+		.progress
+		{background-color: pureBlackColor !important}
+
+		#sidebar .card
+		{background-color: secondLayerBkgColor !important; border-bottom: pureBlackColor !important}
+
+		/* Crossroads */
+			/* Explore Page */
+				.table .bottom
+				.table tfoot t
+				.table-striped tbody tr:nth-of-type(2n+1)
+				{background-color:pureBlackColor !important}
+
+			/* Questing Page */
+				.bg-light
+				.btn-light
+				#main .card
+				select.form-control
+				{background-color: pureBlackColor !important}
+
+			/* Raccoon Wares Page */
+				.hoard .item
+				.combo-selection-container
+				{background-color: pureBlackColor !important}
+
+				.accent
+				.hoard .item-foot
+				.hoard .item-head
+				{background-color: secondLayerBkgColor !important}
+
+				.hoard .item
+				.combo-selection-parent
+				.search_field.form-control
+				{border-color: bordersColor !important}
+
+
+	/* Footer */
+	#footer
+	{background-color:pureBlackColor !important}
+
+
+	/*
+	Made with love by Knighto00 <3
+	I hope you like it! :D
+	Enjoy!
+	*/
+}
